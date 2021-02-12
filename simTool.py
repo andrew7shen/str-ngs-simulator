@@ -18,6 +18,12 @@
 import sys
 import os
 import shutil
+import argparse
+
+#Argparse
+parser = argparse.ArgumentParser(description='Performs ART simulation including the characteristic stutter error to STRs')
+parser.add_argument('add_prob', metavar='u', type=int, help='u being probability of adding additional copy of repeat')
+args = parser.parse_args()
 
 #Creates foldering structure
 current = os.getcwd()
